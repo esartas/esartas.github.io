@@ -1,0 +1,136 @@
+/* Genel Stil Resetleme */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5dc; /* Vintage Krem */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fffaf0; /* Kağıt Rengi */
+    padding: 40px 50px;
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px dashed #bbb;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2em;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-style: italic;
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Navigasyon */
+nav {
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: #e0e0d1;
+    padding: 10px 0;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+nav a {
+    font-family: 'Playfair Display', serif;
+    color: #555;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover { color: #000; border-bottom: 2px solid #a0a090; }
+
+/* Bölümler */
+section { margin-bottom: 60px; padding-bottom: 20px; border-bottom: 1px dashed #ddd; }
+section:last-child { border-bottom: none; }
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    color: #3e3e3e;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::after {
+    content: ''; display: block; width: 60px; height: 2px;
+    background-color: #a0a090; margin: 10px auto 0;
+}
+
+/* Hakkımda */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .about-content { flex-direction: row; text-align: left; }
+}
+
+.profile-img {
+    font-size: 8em;
+    color: #888;
+    background-color: #e0e0d1;
+    border-radius: 5px;
+    padding: 20px;
+    border: 1px solid #bbb;
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.08);
+}
+
+.about-text p { margin-bottom: 15px; font-size: 1.1em; color: #444; }
+.about-text em { display: block; margin-top: 25px; font-size: 1.2em; font-weight: bold; color: #555; font-style: italic; }
+
+/* Projeler */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+.project-card {
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.05);
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.project-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8em; color: #444; margin-bottom: 15px; }
+.project-link { display: inline-block; color: #888; text-decoration: none; font-weight: bold; border-bottom: 1px dashed #888; }
+.project-link:hover { color: #333; border-color: #333; }
+
+/* İletişim */
+.contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; text-align: center; }
+.contact-item { flex-basis: 250px; background-color: #fefefe; padding: 25px; border-radius: 5px; border: 1px solid #ddd; }
+.contact-item div { font-size: 3em; color: #888; margin-bottom: 15px; }
+.contact-item a { color: #777; text-decoration: none; font-size: 1.1em; }
+.contact-item a:hover { color: #333; }
+
+footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px dashed #ddd; color: #777; }
