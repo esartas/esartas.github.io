@@ -49,12 +49,12 @@ title: Home
     <div class="contact-item">
         <div>💼</div>
         <h3>LinkedIn</h3>
-        <a href="https://linkedin.com/in/enfalsartas" target="_blank">linkedin.com/in/enfalsartas</a>
+        <a href="https://linkedin.com/in/enfal-sartas" target="_blank">linkedin.com/in/enfal-sartas</a>
     </div>
     <div class="contact-item">
         <div>🐙</div>
         <h3>GitHub</h3>
-        <a href="https://github.com/enfalsartas" target="_blank">github.com/enfalsartas</a>
+        <a href="https://github.com/esartas" target="_blank">github.com/esartas</a>
     </div>
 </div>
 </section>
