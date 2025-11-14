@@ -6,7 +6,7 @@ title: Home
 <section id="about">
 <h2>About Me</h2>
 <div class="about-content">
-    <div class="profile-img">⚛️</div>
+   <img src="assets/images/profile.jpg" class="profile-photo" alt="Enfal Sartaş">
     <div class="about-text">
         <p><strong>Hello!</strong></p>
         <p>I am Enfal, a physicist pursuing a PhD in <strong>Particle Physics</strong> at Middle East Technical University (METU), and a software instructor.</p>
