@@ -1,0 +1,6 @@
+title: Enfal Sartaş
+description: PhD Physicist | Data Scientist | Python Instructor
+baseurl: ""
+url: "https://esartas.github.io"
+markdown: kramdown
+permalink: /:title/
