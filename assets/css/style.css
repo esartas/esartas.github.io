@@ -1,136 +1,227 @@
-/* Genel Stil Resetleme */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* MODERN MİNİMALİST STİL (FLAT DESIGN) */
+
+/* 1. Temel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5dc; /* Vintage Krem */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #ffffff; /* Tam Beyaz */
+    color: #111111; /* Simsiyah yerine çok koyu gri (göz yormaz) */
+    line-height: 1.7; /* Satır araları geniş */
+    -webkit-font-smoothing: antialiased; /* Yazıların daha keskin görünmesi için */
 }
 
+/* 2. Geniş ve Ferah Yapı */
 .container {
-    width: 100%;
-    max-width: 800px;
-    background-color: #fffaf0; /* Kağıt Rengi */
-    padding: 40px 50px;
-    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.1);
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    max-width: 1000px; /* Daha geniş bir alan */
+    margin: 0 auto;
+    padding: 80px 20px; /* Üstten ve alttan bol boşluk */
 }
 
-/* Header */
+/* 3. Linkler */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+/* 4. Header (Başlık Kısmı) */
 header {
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 1px dashed #bbb;
-    padding-bottom: 20px;
+    margin-bottom: 80px;
+    /* Ortalamak yerine sola yaslı da kullanabilirsin, şimdilik ortalı bırakıyorum ama geniş duracak */
+    text-align: center; 
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.2em;
-    color: #4a4a4a;
-    margin-bottom: 10px;
+    font-weight: 800; /* Çok kalın modern font */
+    font-size: 4rem; /* Dev başlık */
+    letter-spacing: -2px; /* Harfleri birbirine yaklaştırma (Modern dokunuş) */
+    margin-bottom: 15px;
+    color: #000;
 }
 
 header p {
-    font-style: italic;
+    font-weight: 300;
+    font-size: 1.4rem;
     color: #666;
-    font-size: 1.1em;
 }
 
-/* Navigasyon */
+/* 5. Navigasyon (Menü) */
 nav {
-    text-align: center;
-    margin-bottom: 50px;
-    background-color: #e0e0d1;
-    padding: 10px 0;
-    border-radius: 3px;
-    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Linkler arası geniş boşluk */
+    margin-bottom: 120px;
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
 nav a {
-    font-family: 'Playfair Display', serif;
-    color: #555;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-    border-bottom: 2px solid transparent;
+    color: #888;
 }
 
-nav a:hover { color: #000; border-bottom: 2px solid #a0a090; }
+nav a:hover {
+    color: #000; /* Üzerine gelince siyah olsun */
+}
 
-/* Bölümler */
-section { margin-bottom: 60px; padding-bottom: 20px; border-bottom: 1px dashed #ddd; }
-section:last-child { border-bottom: none; }
+/* 6. Bölümler Genel */
+section {
+    margin-bottom: 140px; /* Bölümler arası devasa boşluk (Ferahlık için) */
+}
 
 h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2em;
-    color: #3e3e3e;
-    text-align: center;
-    margin-bottom: 30px;
-    position: relative;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Harf aralığı açık */
+    color: #888; /* Başlıklar silik gri */
+    margin-bottom: 40px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee; /* Çok ince bir çizgi */
+    padding-bottom: 10px;
+    display: inline-block; /* Sadece yazı kadar çizgi olsun */
 }
 
-h2::after {
-    content: ''; display: block; width: 60px; height: 2px;
-    background-color: #a0a090; margin: 10px auto 0;
-}
-
-/* Hakkımda */
+/* 7. Hakkımda Kısmı */
 .about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    .about-content { flex-direction: row; text-align: left; }
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Yanda resim, sağda geniş metin */
+    gap: 60px;
+    align-items: start;
 }
 
 .profile-img {
-    font-size: 8em;
-    color: #888;
-    background-color: #e0e0d1;
-    border-radius: 5px;
-    padding: 20px;
-    border: 1px solid #bbb;
-    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.08);
+    font-size: 6rem;
+    /* Arka planı kaldırdık, sadece ikon */
 }
 
-.about-text p { margin-bottom: 15px; font-size: 1.1em; color: #444; }
-.about-text em { display: block; margin-top: 25px; font-size: 1.2em; font-weight: bold; color: #555; font-style: italic; }
+.about-text p {
+    margin-bottom: 25px;
+    font-size: 1.25rem; /* Metinler büyük ve okunaklı */
+    font-weight: 300; /* İnce font */
+    color: #333;
+}
 
-/* Projeler */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.about-text strong {
+    font-weight: 600;
+    color: #000;
+}
+
+.about-text em {
+    display: block;
+    margin-top: 30px;
+    font-style: normal;
+    font-family: serif; /* Sadece alıntı için şık bir serif dokunuş */
+    font-size: 1.5rem;
+    color: #000;
+}
+
+/* 8. Projeler (Grid Yapısı) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
 
 .project-card {
-    background-color: #fefefe;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.05);
-    border: 1px solid #ddd;
-    text-align: center;
+    /* Kart görünümünü siliyoruz (Flat Design) */
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    text-align: left;
+    transition: transform 0.2s ease;
 }
 
-.project-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8em; color: #444; margin-bottom: 15px; }
-.project-link { display: inline-block; color: #888; text-decoration: none; font-weight: bold; border-bottom: 1px dashed #888; }
-.project-link:hover { color: #333; border-color: #333; }
+.project-card:hover {
+    transform: translateY(-5px); /* Hafif yukarı kalkma */
+}
 
-/* İletişim */
-.contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; text-align: center; }
-.contact-item { flex-basis: 250px; background-color: #fefefe; padding: 25px; border-radius: 5px; border: 1px solid #ddd; }
-.contact-item div { font-size: 3em; color: #888; margin-bottom: 15px; }
-.contact-item a { color: #777; text-decoration: none; font-size: 1.1em; }
-.contact-item a:hover { color: #333; }
+.project-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+}
 
-footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px dashed #ddd; color: #777; }
+.project-card p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.project-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #000;
+    border-bottom: 2px solid #000; /* Kalın siyah alt çizgi */
+    padding-bottom: 2px;
+}
+
+.project-link:hover {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 9. İletişim */
+.contact-info {
+    display: flex;
+    gap: 60px;
+    justify-content: center; /* Veya flex-start */
+}
+
+.contact-item {
+    /* Kartları sildik, sadece yazı kaldı */
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    text-align: left;
+    flex-basis: auto;
+}
+
+.contact-item div {
+    display: none; /* İkonları gizledik (Daha minimalist) */
+}
+
+.contact-item h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.contact-item a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-item a:hover {
+    border-bottom-color: #000;
+}
+
+/* 10. Footer */
+footer {
+    margin-top: 100px;
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
+    header h1 { font-size: 2.5rem; }
+    .about-content { grid-template-columns: 1fr; gap: 20px; }
+    .contact-info { flex-direction: column; align-items: center; gap: 30px; }
+    .container { padding: 40px 20px; }
+}
